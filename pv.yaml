@@ -10,4 +10,4 @@ spec:
   persistentVolumeReclaimPolicy: Recycle
   nfs:
     path: /mnt/linuxidc
-    server: 128.110.153.168
+    server: 128.110.153.101
