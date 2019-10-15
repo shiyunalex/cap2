@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: job1
+spec:
+  containers:
+  - args:
+    - app.py
+    - '200'
+    - /root/job1.csv
+    - job1
+    command:
+    - python
+    image: fuyuqi1995/mig-lenet
+    name: lenet-test-epoch
+    volumeMounts:
+    - mountPath: /root/
+      name: task-pv-storage
+  restartPolicy: Never
+  volumes:
+  - name: task-pv-storage
+    persistentVolumeClaim:
+      claimName: pvc1-nfs
