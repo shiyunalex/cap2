@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: job1
 spec:
+  schedulerName: my-scheduler
   containers:
   - args:
     - app.py
