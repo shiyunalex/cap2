@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: different-container
 spec:
+  schedulerName: my-scheduler
   restartPolicy: OnFailure
   containers:
   - name: keras-vae-mlp1
