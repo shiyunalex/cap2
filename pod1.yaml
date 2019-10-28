@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: different-container
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: keras-vae-mlp1
+    image: fuyuqi1995/keras-vae-mlp
+    resources:
+      limits:
+        cpu: "15"
+      requests:
+        cpu: "5"
+  - name: cnn1
+    image: fuyuqi1995/cnn
+    resources:
+      limits:
+        cpu: "15"
+      requests:
+        cpu: "5"
+  - name: rnn1
+    image: wzheng33/rnn
+    resources:
+      limits:
+        cpu: "15"
+      requests:
+        cpu: "5"
